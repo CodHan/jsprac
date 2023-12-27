@@ -1,0 +1,27 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>끝말잇기</title>
+  </head>
+
+  <body>
+    <div><span id="order">1</span>번째 참가자</div>
+    <div>제시어: <span id="word"></span></div>
+    <input type="text" />
+    <button>입력</button>
+
+    <script>
+      const number = parseInt(prompt('몇 명이 참가하나요?'), 10); //prompt로 값을 받아 number에 저장, prompt는 문자열이기때문에 숫자열로 전환.
+      alert(number);
+      const yesOrNo = confirm('맞나요?');
+
+      document.querySelector('input').addEventListener('input', (event) => {
+        console.log('글자입력', event.target.value);
+      });
+      document.querySelector('button').addEventListener('click', function () {
+        console.log('버튼 클릭');
+      });
+    </script>
+  </body>
+</html>
