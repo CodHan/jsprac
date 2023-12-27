@@ -12,16 +12,15 @@
     <button>입력</button>
 
     <script>
-      const number = parseInt(prompt('몇 명이 참가하나요?'), 10); //prompt로 값을 받아 number에 저장, prompt는 문자열이기때문에 숫자열로 전환.
-      alert(number);
-      const yesOrNo = confirm('맞나요?');
+      const number = Number(prompt('몇 명이 참가하나요?'));
+      const $button = document.querySelector('button');
+      const $input = document.querySelector('input');
 
-      document.querySelector('input').addEventListener('input', (event) => {
-        console.log('글자입력', event.target.value);
-      });
-      document.querySelector('button').addEventListener('click', function () {
-        console.log('버튼 클릭');
-      });
+      const onClickButton = () => {};
+      const onInput = () => {};
+
+      $button.addEventListener('click', onClickButton);
+      $input.addEventListener('input', onInput);
     </script>
   </body>
 </html>
